@@ -5,7 +5,7 @@
 </div>
 
  <div class="row justify-content-center">
-	<form action="/campgrounds/<%= campground._id %>?_method=PUT" method="POST" style="width : 30%; margin: 18px auto;">
+	<form action="/campgrounds/<%= campground._id %>?_method=PUT" method="POST" style="width : 40%; margin: 18px auto;">
 		<div class="form-group ">
 			<input type="text" class="form-control" value="<%= campground.name %>" name="campground[name]">
 		</div>
@@ -16,7 +16,7 @@
 		  <textarea class="form-control" rows="3" name="campground[description]"><%= campground.description %></textarea>
 		</div>
 		<div class="row justify-content-center">
-				<button class="btn btn-primary btn-lg my-2" style="width: 94%">Submit</button>
+				<button class="btn btn-info btn-lg my-2" style="width: 94%">Submit</button>
 		</div>
 		<a href="/campgrounds/<%= campground._id %>">Go back</a>
 	</form>

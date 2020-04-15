@@ -10,21 +10,13 @@
  	</header>
 	<div class="row">
 		<% campgrounds.forEach(function(campground){ %>
-			<!-- <div class="col-sm-6 col-md-4">
-				<div class="img-thumbnail">
-					<img src="<%= campground.image %>">
-					<div class="caption">
-						<h4><%=campground.name %></h4>
-					</div>
-				</div>
-			</div> -->
 			<div class="col-md-4 col-sm-6">
 				<div class="card">
 					<img class="card-img-top" src="<%= campground.image %>" alt="Card image cap">
 					<div class="card-body text-center">
 						<h5 class="card-title"><%=campground.name %></h5>
 						<!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
-						<a href="/campgrounds/<%= campground._id%>" class="btn btn-primary">More info</a> 
+						<a href="/campgrounds/<%= campground._id%>" class="btn btn-info">More info</a> 
 					</div>
 				</div>
 			</div>

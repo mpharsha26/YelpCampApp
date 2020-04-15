@@ -15,10 +15,8 @@ var campgroundRoutes = require("./routes/campgrounds")
 var commentRoutes = require("./routes/comments");
 var indexRoutes = require("./routes/index");
 
-// mongoose.connect("mongodb://localhost:27017/yelp_camp", {useNewUrlParser: true,useUnifiedTopology: true});
 mongoose.connect(process.env.DATABASEURL ,{useNewUrlParser: true,useUnifiedTopology: true});
 
-//seedDB();
 app.use(flash());
 //passport Config
 
