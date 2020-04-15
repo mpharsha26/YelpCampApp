@@ -15,7 +15,8 @@ var campgroundRoutes = require("./routes/campgrounds")
 var commentRoutes = require("./routes/comments");
 var indexRoutes = require("./routes/index");
 
-mongoose.connect("mongodb://localhost:27017/yelp_camp", {useNewUrlParser: true,useUnifiedTopology: true});
+// mongoose.connect("mongodb://localhost:27017/yelp_camp", {useNewUrlParser: true,useUnifiedTopology: true});
+mongoose.connect("mongodb+srv://yelp_mp:pass@mp_yelp@cluster0-vozod.mongodb.net/test?retryWrites=true&w=majority", {useNewUrlParser: true,useUnifiedTopology: true});
 
 //seedDB();
 app.use(flash());
