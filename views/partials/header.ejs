@@ -1,0 +1,49 @@
+<!Doctype HTML>
+<html>
+	<head>
+		<title>YelpCamp</title>
+		<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+			<a class="navbar-brand" href="/">Yelpcamp</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+			<ul class="navbar-nav">
+				<% if(!currentUser){ %>
+				<li class="nav-item">
+					<a class="nav-link" href="/login">Login<span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/register">Sign-Up</a>
+				</li>
+				<% } else { %>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Signed in as <%= currentUser.username %></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/logout">Logout</a>
+				</li>
+				<% } %>
+			</ul>
+			</div>
+	</nav>
+		<div class="container">
+			<% if (!(success == "")) {  %>
+			<% console.log(typeof(success)) %>
+				<div class="alert alert-success" role="alert">
+					<%= success %>
+				</div>
+			<% } %>
+			<% if (!(error == "")) {  %>
+				<div class="alert alert-danger" role="alert">
+					<%= error %>
+				</div>
+			<% } %>
+		</div>
+	
+	
+		
